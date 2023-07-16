@@ -1,0 +1,57 @@
+
+
+/* ======================================================================================================================== */
+
+/* Hamburger menu icon */
+
+.hamburgerWrapper {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    padding-top: 0.4rem;
+    position: relative;
+}
+
+.hamburgerWrapper span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.hamburgerWrapper input {
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    left: -12px;
+    top: 4px;
+
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Hamburger icon Animation */
+.hamburgerWrapper span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.hamburgerWrapper span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.hamburgerWrapper input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-5px, -1px);
+}
+
+.hamburgerWrapper input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-3px, 0);
+}
+
+.hamburgerWrapper input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+}
