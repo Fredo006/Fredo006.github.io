@@ -3,93 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive-style.css">
-    <link rel="stylesheet" href="css/hamburgerMenu-style.css">
-
-
-    <!-- google fonts import -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Handlee&family=Satisfy&display=swap" rel="stylesheet">
-    <!-- end of google fonts import -->
-
-    <title>Test Portfolio Website Parallax</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Try Chat GPT API</title>
 </head>
 <body>
-    <section class="sec1">
-        <img src="assets/sky.png" alt="" id="sky">
-        <img src="assets/moon.png" alt="" id="moon">
-        <img src="assets/greetings.png" alt="" id="greetings">
-        <img src="assets/mountains.png" alt="" id="mountains">
-        <img src="assets/land.png" alt="" id="land">
-
-        <!-- header side -->
-        <div class="header" id="header">
-                            
-            
-            <!-- navbarr side -->
-            <div class="navbarDiv">
-                <nav class="navbar">
-                    <div class="textLogoWrapper">
-                        <div class="textLogo">
-                            <h4 id="logo" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);">Fredo Ronan</h4>
-                        </div>
-                    </div>
-
-
-                    <!-- Hamburger icon menu side -->
-                    <div class="hamburgerWrapper">
-                        <input type="checkbox">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <!-- end of Hamburger icon menu side -->
-
-                    <!-- navbar list -->
-                    <ul class="navBtnContainer">
-                        <li class="navBtn">
-                            <a class="navbarLinkBtn" href="#">Home</a>
-                        </li>
-                        <li class="navBtn">
-                            <a class="navbarLinkBtn" href="#">Projects</a>
-                        </li>
-                        <li class="navBtn">
-                            <a class="navbarLinkBtn" href="#">GitHub</a>
-                        </li>
-                        <li class="navBtn">
-                            <a class="navbarLinkBtn" href="#">About</a>
-                        </li>
-                        <li class="navBtn">
-                            <a class="navbarLinkBtn" href="#">Contact</a>
-                        </li>
-                    </ul>
-                    <!-- end of navbar list -->
-                </nav>
-            </div>
-            <!-- end of navbar side -->
+    <div class="container-parent p-5">
+        <h1>Chat GPT API</h1>
+        <div class="mainContainer container-sm text-center mt-5">
+            <div class="response-container"></div>
+            <div class="wait hide">Waiting response....</div>
+            <input type="text" class="input-text form-control position-absolute bottom-0 start-50 translate-middle-x">
         </div>
-        <!-- end of header side -->
-
-    </section>
-
-    <div class="content">
-        <p>
-            <h2>Testing article</h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque commodo, magna in suscipit mollis, ex dui congue mauris, eget gravida lacus eros sed neque. Donec viverra faucibus viverra. Duis et cursus ante, non pellentesque urna. Duis condimentum dapibus egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc placerat mauris et elit venenatis placerat id ut quam. Donec convallis magna in lacus lobortis efficitur. Sed viverra turpis a ligula egestas ultricies. Sed efficitur dui ac mauris egestas lacinia. In pellentesque dolor tempus, suscipit nibh in, tempus neque. Aliquam id nunc augue. Quisque fringilla, eros vitae ullamcorper tincidunt, lacus massa condimentum ipsum, congue commodo justo odio non quam.<br><br>
-
-            Nullam sed commodo diam, auctor efficitur est. Aliquam eu ante sollicitudin, interdum quam ac, efficitur erat. Cras ornare, diam non egestas accumsan, arcu urna volutpat mi, at condimentum purus mi vitae leo. Nulla id est id libero pharetra sodales. Duis tristique tempus neque eu faucibus. Mauris auctor turpis sed felis imperdiet, vel consectetur risus iaculis. Fusce orci enim, ullamcorper sit amet interdum vitae, semper id tellus. Pellentesque ante magna, consequat eget metus at, commodo suscipit arcu. Duis quis vestibulum magna. Donec tempor tempor bibendum. Quisque scelerisque, est pharetra vehicula volutpat, quam justo mollis libero, eu ultricies mi orci eget diam. Nullam eget magna in turpis tincidunt euismod.<br><br>
-
-            Donec pretium vitae metus sit amet feugiat. Curabitur imperdiet tincidunt sem, a rhoncus mauris sodales vitae. Etiam augue sem, hendrerit vel risus eu, elementum hendrerit nisl. Duis maximus ligula elit, sed facilisis dui sagittis vel. Donec nec feugiat urna. Mauris dictum sapien dui, a hendrerit neque imperdiet sed. Nullam faucibus ac nisi ut hendrerit. Vestibulum ultricies, ligula at tincidunt vulputate, ex arcu commodo quam, eget pulvinar quam mi at erat.<br><br>
-
-            Morbi ut erat feugiat tellus lobortis bibendum. Nullam arcu neque, dignissim in ipsum vitae, dapibus tristique dui. Donec dapibus porta lacus et interdum. Proin blandit sapien eu nisl dignissim pellentesque. Cras vitae sodales libero, a hendrerit enim. Ut sit amet felis vitae arcu dapibus cursus. Sed pulvinar velit a nibh convallis, sed viverra augue mattis. Phasellus auctor, dolor sed tempor eleifend, quam justo commodo nibh, sit amet vehicula risus tellus in lectus.<br><br>
-
-            Aliquam finibus risus in ligula vulputate, non luctus orci tincidunt. Aliquam erat volutpat. Nunc scelerisque sagittis tellus, quis aliquet felis aliquet vel. Pellentesque tempor vitae tellus eu pretium. Nulla sed nisi nec erat scelerisque consequat. Fusce pellentesque blandit porta. Donec sollicitudin porttitor ullamcorper. In sollicitudin ut lectus eget mattis. Vivamus nec facilisis erat, a pretium nulla. Nulla non nulla magna. Morbi non mi vitae velit pretium mollis et sed justo. Sed quis tempus ipsum. Pellentesque sapien sapien, molestie vitae feugiat sit amet, bibendum in turpis. Cras libero lectus, mattis lacinia tellus ac, facilisis laoreet nibh. Donec metus nibh, fringilla vitae tempus quis, mattis ut felis.
-        </p>
     </div>
+    
 
-    <script src="js/script.js"></script>
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
