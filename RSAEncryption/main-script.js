@@ -29,6 +29,9 @@ let textDecrypt = document.querySelector('#data-to-decrypt');
 let textEncryptResult = document.getElementById('encrypt-result');
 let textDecryptResult = document.getElementById('decrypt-result');
 
+let publicKeyInput = document.querySelector('#public-key-input');
+let n_valueInput = document.querySelector('#n-value-input');
+
 let encryptBtn = document.querySelector('#encrypt-btn');
 let decryptBtn = document.querySelector('#decrypt-btn');
 let decryptProgress = document.querySelector('.decrypt-btn-container p');
@@ -39,8 +42,14 @@ let copyDecryptBtn = document.getElementById('copy-decrypt-btn');
 //Encrypt side
 encryptBtn.addEventListener('click', () => {
     let textToEncrypt = textEncrypt.value;
-    if(textToEncrypt != ''){
-        let encrypted = encrypt_data(publicKey, n_value, textToEncrypt);
+    let publicKeyInputValue = publicKeyInput.value;
+    let n_valueInputValue = n_valueInput.value;
+
+    console.log('Public key input: ' + publicKeyInputValue);
+    console.log('N Value Input: ' + n_valueInputValue);
+
+    if(textToEncrypt != '' && publicKeyInputValue != '' && n_valueInputValue != ''){
+        let encrypted = encrypt_data(publicKeyInputValue, n_valueInputValue, textToEncrypt);
         textEncryptResult.value = encrypted.join('');
     }
 });
