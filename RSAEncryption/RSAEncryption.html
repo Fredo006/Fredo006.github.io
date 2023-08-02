@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/RSAEncryption/style-RSA.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <title>RSA Encryption Demo</title>
+</head>
+<body>
+    <div class="main-container">
+        <h4>RSA Message Encryption</h4>
+        <div class="input-text-container">
+            <div class="input-to-encrypt">
+                <h5>Encrypt Message</h5>
+                <textarea name="text-to-encrypt" id="text-to-encrypt" cols="90" rows="10"></textarea>
+                <button class="btn btn-outline-light" id="encrypt-btn">Encrypt</button>
+            </div>
+            
+            <div class="input-to-decrypt">
+                <h5>Decrypt Message</h5>
+                <textarea name="data-to-decrypt" id="data-to-decrypt" cols="90" rows="10"></textarea>
+                <div class="decrypt-btn-container">
+                    <button class="btn btn-outline-light" id="decrypt-btn">Decrypt</button>
+                    <p>Decrypt in progress......</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div class="result-encrypt">
+                <h5>Hasil Enkripsi</h5>
+                <textarea name="encrypt-result" id="encrypt-result" cols="90" rows="10" readonly></textarea>
+                <button class="btn btn-outline-light" id="copy-encrypt-btn">Salin hasil enkripsi</button>
+            </div>
+            
+            <div class="result-decrypt">
+                <h5>Hasil Dekripsi</h5>
+                <textarea name="decrypt-result" id="decrypt-result" cols="90" rows="10" readonly></textarea>
+                <button class="btn btn-outline-light" id="copy-decrypt-btn">Salin hasil dekripsi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop Up -->
+    <div class="modal fade show" id="modal-wrapper">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3" id="pop-up-title">INFO!</h1>
+                </div>
+    
+                <div class="modal-body">
+                    <h4 class="fs-5">Salin Public Key dan N value anda ini</h4><br>
+                    <p class="fs-5" id="public-key-field"></p>
+                    <p class="fs-5" id="n-value-field"></p>
+
+                    <p class="fs-6 fst-italic" style="color: red;">
+                        PERHATIAN : <br>Jika anda tidak menyalin public key dan n value anda, anda di harapkan untuk harus mengingatnya
+                        supaya sistem enkripsi ini berhasil.<br>
+                    </p>
+
+                    <hr style="color: red;">
+
+                    <p class="fs-6" style="color: red;">
+                        JIKA ANDA BERMAIN PESAN ENKRIPSI DENGAN TEMAN ANDA, MAKA KETIKA ANDA RELOAD/REFRESH HALAMAN INI ANDA HARUS
+                        MEMBERITAHU ULANG PUBLIC KEY DAN N VALUE ANDA KE TEMAN ANDA.<br><br>
+                        *Terdapat Pop Up Konfirmasi refresh halaman ketika secara tidak sengaja refresh halaman ini.
+                    </p>
+                </div>
+    
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="close-btn-modal">Close</button>
+                    <button class="btn btn-primary" id="copy-public-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade show" id="modal-wrapper-confirmation">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3" id="pop-up-title">KONFIRMASI!</h1>
+                </div>
+    
+                <div class="modal-body">
+                    <h4 class="fs-5">Public Key dan N value anda saat ini</h4><br>
+                    <p class="fs-5" id="public-key-field"></p>
+                    <p class="fs-5" id="n-value-field"></p>
+
+                    <p class="fs-6 fst-italic" style="color: red;">
+                        PERHATIAN : <br>Jika anda merefresh halaman ini maka Public Key dan N value anda sebelumnya akan
+                        tidak belaku lagi dan akan di generate Public Key dan N value anda yang baru saat halaman ini sudah
+                        refresh
+                    </p>
+                </div>
+    
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="cancel-btn-modal">Cancel</button>
+                    <button class="btn btn-primary" id="continue-refresh-btn">Lanjutkan refresh</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/RSAEncryption/math-operation.js"></script>
+    <script src="/RSAEncryption/prime-number-op.js"></script>
+    <script src="/RSAEncryption/euclidGCD.js"></script>
+    <script src="/RSAEncryption/public_key_private_key.js"></script>
+    <script src="/RSAEncryption/encrypt-decrypt.js"></script>
+    <script src="/RSAEncryption/main-script.js"></script>
+</body>
+</html>
