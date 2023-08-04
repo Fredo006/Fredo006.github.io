@@ -19,8 +19,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .form-container input {
     width: 70%;
+}
+
+p.hide {
+    display: none;
 }
