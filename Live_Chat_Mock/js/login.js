@@ -2,10 +2,10 @@
 const linkAPI = window.localStorage.getItem("link_api");
 
 
-const searchData = async (username, password) => {
+const searchData = async (username, password, dateTimeNow) => {
 
     try {
-        const res = await fetch(`${linkAPI}api/login/${username}+${password}`,{
+        const res = await fetch(`${linkAPI}api/login/${username}+${password}+${dateTimeNow}`,{
             method: "GET",
             headers: new Headers({
                 "ngrok-skip-browser-warning": "69420",
@@ -56,6 +56,50 @@ let notif = document.getElementById('error_handling');
 loginBtn.addEventListener('click', () => {
     let username = usernameInput.value;
     let password = passwordInput.value;
+    let dateTimeNow = getTimeDate();
 
-    searchData(username, password);
+    searchData(username, password, dateTimeNow);
 });
+
+passwordInput.addEventListener('keyup', (event) => {
+    let username = usernameInput.value;
+    let password = passwordInput.value;
+    let dateTimeNow = getTimeDate();
+
+    if(event.key === "Enter"){
+        searchData(username, password, dateTimeNow);
+    }
+});
+
+
+function getTimeDate(){
+    let today = new Date();
+
+    let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    let minutes = formatMinutes(today);
+
+    let seconds = formatSeconds(today);
+
+    let date = today.getDate()+'-'+(months[today.getMonth()])+'-'+today.getFullYear();
+    let time = today.getHours() + ":" + minutes + ":" + seconds;
+    let dateTime = date+' | '+time;
+
+    return dateTime;
+}
+
+function formatMinutes(today){
+    if(today.getMinutes() < 10){
+        return '0' + today.getMinutes();
+    } else {
+        return today.getMinutes();
+    }
+}
+
+function formatSeconds(today){
+    if(today.getSeconds() < 10){
+        return '0' + today.getSeconds();
+    } else {
+        return today.getSeconds();
+    }
+}

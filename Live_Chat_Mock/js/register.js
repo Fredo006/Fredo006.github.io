@@ -23,7 +23,7 @@ const sendData = async (name, username, password) => {
 
         console.log(output);
 
-        window.location.href = "login.html";
+        window.location.href = "/Live_Chat_Mock/login.html";
     }catch(error){
         console.log(error);
     }

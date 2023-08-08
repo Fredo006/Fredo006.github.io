@@ -5,7 +5,26 @@ const id_user_logged_in = window.localStorage.getItem("id_user");
 const linkAPI = window.localStorage.getItem("link_api");
 
 
-//API Function
+// const ws = new WebSocket(`${linkAPI}/api/ws-chat/${id_user_logged_in}`);
+
+//API Functions
+const getChat = async () => {
+    try {
+        const res = await fetch(`${linkAPI}api/get-data/`, {
+            method: "GET",
+            headers: new Headers({
+                "ngrok-skip-browser-warning": "69420",
+            })
+        })
+
+        const output = await res.json();
+
+        console.log(output);
+    }catch(error){
+        console.log(error);
+    }
+}
+
 const sendChat = async (chat, date) => {
     try {
 
@@ -33,6 +52,8 @@ const sendChat = async (chat, date) => {
     }
 }
 
+
+
 let welcomeTitle = document.getElementById('welcome-title');
 
 welcomeTitle.innerHTML = "Welcome " + loggedName;
@@ -51,6 +72,7 @@ form.addEventListener('submit', (e) => {
     console.log(dateTimeNow);
     console.log(messageInput.value);
 
+    ws.send(messageInput.value);
     sendChat(messageInput.value, dateTimeNow);
 
     messageInput.value = "";
@@ -78,11 +100,31 @@ function getTimeDate(){
 
     let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
+    let minutes = formatMinutes(today);
+
+    let seconds = formatSeconds(today);
+
     let date = today.getDate()+'-'+(months[today.getMonth()])+'-'+today.getFullYear();
-    let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    let time = today.getHours() + ":" + minutes + ":" + seconds;
     let dateTime = date+' | '+time;
 
     return dateTime;
+}
+
+function formatMinutes(today){
+    if(today.getMinutes() < 10){
+        return '0' + today.getMinutes();
+    } else {
+        return today.getMinutes();
+    }
+}
+
+function formatSeconds(today){
+    if(today.getSeconds() < 10){
+        return '0' + today.getSeconds();
+    } else {
+        return today.getSeconds();
+    }
 }
 
 function appendMessage(chat, dateTime){
@@ -107,4 +149,37 @@ function appendMessage(chat, dateTime){
     messageChat.appendChild(pDate);
 
     chatsContainer.appendChild(messageChat);
+    chatsContainer.scrollTop = chatsContainer.scrollHeight;
 }
+
+
+// function update(){
+//     $.ajax({
+//         url: `${linkAPI}api/get-data/`,
+//         method: "GET",
+//         success: function(response){
+//             console.log(response);
+//         }
+//     }).then(() => {
+//         setTimeout(() => {
+//             update();
+//         }, 1000);
+//     })
+// }
+
+// update();
+
+
+// (function update() {
+//     $.ajax({
+//         url: `${linkAPI}api/get-data/`,
+//         method: "GET",
+//         datatype: "json",
+//         contentType: "application/json",
+//         success: function(response){
+//             console.log(response);
+//         }
+//     }).then(function() {          
+//        setTimeout(update, 3000); 
+//     });
+// })(); 
