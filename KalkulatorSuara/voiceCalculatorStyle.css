@@ -50,3 +50,10 @@ body {
     border-radius: 10px;
     resize: none;
 }
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
