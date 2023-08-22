@@ -1,0 +1,52 @@
+*, html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(23, 75, 133);
+    color: white;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#prompt {
+    width: 70%;
+}
+
+.start-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.notif {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.notif.show {
+    display: flex;
+}
+
+.respon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.respon textarea {
+    padding: 1rem;
+    border-radius: 10px;
+    resize: none;
+}

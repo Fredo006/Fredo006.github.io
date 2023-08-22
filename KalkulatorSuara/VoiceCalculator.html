@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/KalkulatorSuara/voiceCalculatorStyle.css">
+    <title>Kalkulator Suara</title>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <h3>Kalkulator Suara</h3>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="prompt-container">
+            <input type="text" class="form-control mx-auto col-10 col-md-8 col-lg-6" id="prompt" placeholder="perintah anda akan tertulis disini...">
+        </div>
+
+        <div class="start-btn-container">
+            <button class="btn btn-outline-warning" id="start-voice-btn">Mulai Bicara</button>
+        </div>
+
+        <div class="notif fst-italic">Mohon tunggu, kalkulator sedang menghitung....</div>
+
+        <div class="respon">
+            <textarea name="" id="respon-textarea" cols="140" rows="10" placeholder="respon hasilnya akan tertampil disini..." readonly></textarea>
+        </div>
+    </div>
+
+    <script src="/KalkulatorSuara/voiceCalculator.js"></script>
+</body>
+</html>
