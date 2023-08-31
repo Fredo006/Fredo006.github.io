@@ -34,7 +34,7 @@ function fetchDataCuaca(lokasi){
     
         let json_data = document.getElementById('json-data');
     
-        json_data.innerHTML = JSON.stringify(arrayJson, null, 4);
+        json_data.innerText = JSON.stringify(arrayJson, null, 4);
     
         let preTag = document.createElement('pre');
     
