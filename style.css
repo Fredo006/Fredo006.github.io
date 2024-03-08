@@ -7,6 +7,11 @@ body {
     background-color: rgb(154, 203, 246);
 }
 
+button {
+    width: 12rem;
+    height: 12rem;
+}
+
 .main-container {
     position: absolute;
     height: 100%;
@@ -38,7 +43,7 @@ body {
 .services-container {
     /* height: 200px; */
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     gap: 1rem;
