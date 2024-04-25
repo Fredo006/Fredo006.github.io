@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>CCTV Kota Yogyakarta</title>
+</head>
+<body>
+    <div class="head">
+        <h1>Pantauan CCTV Kota Yogyakarta</h1>
+    </div>
+    <div class="main-container">
+        <div class="cctv-video-container">
+            <video id="depan_stasiun_tugu" class="video-js vjs-default-skin" controls width="640" height="360">
+                <source src="https://cctvjss.jogjakota.go.id/margo-utomo/Wisma-Ratih.stream/playlist.m3u8" type="application/x-mpegURL">
+            </video>
+            <h2>Depan Stasiun Tugu</h2>
+        </div>
+
+        <div class="cctv-video-container">
+            <video id="depan_mall_malioboro" class="video-js vjs-default-skin" controls width="640" height="360">
+                <source src="https://cctvjss.jogjakota.go.id/malioboro/Malioboro_6_Mall_Utara.stream/playlist.m3u8" type="application/x-mpegURL">
+            </video>
+            <h2>Depan Mall Malioboro Hadap Utara</h2>
+        </div>
+
+        <div class="cctv-video-container">
+            <video id="depan_optic_tugu_malioboro" class="video-js vjs-default-skin" controls width="640" height="360">
+                <source src="https://cctvjss.jogjakota.go.id/margo-utomo/Optic-Tugu.stream/playlist.m3u8" type="application/x-mpegURL">
+            </video>
+            <h2>Depan Optic Tugu Malioboro</h2>
+        </div>
+
+        <div class="cctv-video-container">
+            <video id="sungai_ngentak_kapten_haryadi" class="video-js vjs-default-skin" controls width="640" height="360">
+                <source src="https://cctvjss.jogjakota.go.id/bpbd/BPBD_ngentak.stream/playlist.m3u8" type="application/x-mpegURL">
+            </video>
+            <h2>Sungai Ngentak Kapten Haryadi</h2>
+        </div>
+
+        <div class="cctv-video-container">
+            <video id="depan_galeria" class="video-js vjs-default-skin" controls width="640" height="360">
+                <source src="https://cctvjss.jogjakota.go.id/atcs/ATCS_Simpang_Galeria_TimurSelatan.stream/playlist.m3u8" type="application/x-mpegURL">
+            </video>
+            <h2>Depan Galeria</h2>
+        </div>
+
+        <div class="cctv-video-container">
+            <video id="simpang_demangan_hadap_timur" class="video-js vjs-default-skin" controls width="640" height="360">
+                <source src="https://cctvjss.jogjakota.go.id/atcs/ATCS_Simpang_Demangan_View_Timur.stream/playlist.m3u8" type="application/x-mpegURL">
+            </video>
+            <h2>Simpang Demangan Hadap Timur</h2>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="footer-text">Layout by <a href="https://fredo-ronan.github.io/">Fredo Ronan</a></p>
+        <p class="footer-text">
+            Source Media <a href="https://cctv.jogjakota.go.id/">CCTV Berbasis Kewilayahan Kota Yogyakarta</a>
+        </p>
+    </div>
+
+    <script src="config.js"></script>
+</body>
+</html>
