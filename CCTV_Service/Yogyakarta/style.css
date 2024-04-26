@@ -19,6 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: rgb(0, 45, 108);
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -36,5 +37,6 @@
 }
 
 .footer-text {
+    text-align: center;
     opacity: 0.5;
 }
