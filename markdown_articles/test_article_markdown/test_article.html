@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test Markdown</title>
+    <meta name="author" content="github.com/marketingpipeline" />
+    <meta
+      name="description"
+      content="markdown articles"
+    />
+    <meta
+      name="keywords"
+      content="github,javascript,html,markdown,gfm,github-flavored-markdown,markdown-parser,commonmark,html-converter,markdown-to-html,markdown-converter,showdown,markdown-flavors,md,github-markdown,md-to-html,markdown-tags,common-mark,markdown-tag"
+    />
+
+    <meta property="og:title" content="Markdown-Tag Demo" />
+    <meta
+      property="og:description"
+      content="Markdown Articles"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/fr-icon.ico">
+    <style>
+        pre {
+            background: linear-gradient(180deg,#2d2d2d 0,#2d2d2d 1.2em,#2d2d2d 0);
+        }
+        
+        pre code {
+            color: white;
+        }
+        
+        /* pre[data-lang]::before { content: attr(data-lang); display: block; } */
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  </head>
+
+<body>
+<github-md>
+# Latar Belakang
+
+Dalam era digital saat ini, platform media sosial seperti YouTube telah menjadi sumber utama konten video yang mencakup berbagai topik, mulai dari hiburan, pendidikan, berita, musik, olahraga, hingga tutorial. Setiap menit, ratusan jam video diunggah ke YouTube, menjadikannya salah satu platform terbesar untuk berbagi konten video.
+
+### Peningkatan Konten Video
+Dengan peningkatan eksponensial dalam jumlah konten video, mengelola dan mengkategorikan informasi menjadi tantangan yang signifikan. Judul video sering kali memberikan informasi penting tentang isi dan konteks video tersebut. Oleh karena itu, analisis judul video dapat menjadi langkah awal yang penting dalam mengklasifikasikan dan mengategorikan konten.
+
+## Pentingnya Klasifikasi Konten
+Klasifikasi konten video menjadi topik atau tema tertentu dapat membantu dalam beberapa aspek:
+1. **Kemudahan Pencarian**: Dengan klasifikasi yang tepat, pengguna dapat dengan mudah menemukan video berdasarkan minat atau topik tertentu.
+2. **Rekomendasi yang Lebih Baik**: Algoritma rekomendasi dapat bekerja lebih efektif jika konten telah dikategorikan dengan benar.
+3. **Analisis Tren**: Mengkategorikan video berdasarkan topik dapat membantu dalam menganalisis tren dan pola konsumsi konten video.
+4. **Moderasi Konten**: Untuk platform besar seperti YouTube, kemampuan untuk mengklasifikasikan konten dapat membantu dalam moderasi dan memastikan bahwa konten yang tidak pantas atau berbahaya dapat diidentifikasi dan dihapus dengan cepat.
+
+## Penggunaan Machine Learning untuk Klasifikasi
+Karena jumlah video yang sangat besar, penggunaan pembelajaran mesin (machine learning) menjadi metode yang efektif untuk mengotomatisasi proses klasifikasi. Dengan mengumpulkan dataset judul-judul video YouTube dan memberikan label yang sesuai dengan topik atau tema video, kita dapat melatih model pembelajaran mesin untuk mengenali pola-pola dalam teks dan melakukan klasifikasi otomatis.
+
+## Mengapa Judul Video?
+Judul video biasanya singkat, namun memberikan informasi yang cukup untuk mengidentifikasi isi video. Mereka sering menggunakan kata kunci dan frasa yang mencerminkan topik utama video. Oleh karena itu, analisis dan klasifikasi judul video dapat menjadi cara yang efektif untuk memahami konten YouTube tanpa perlu menganalisis seluruh video.
+
+## Tantangan dan Kesempatan
+Walaupun judul video memberikan banyak informasi, ada juga tantangan yang harus dihadapi:
+- **Kreativitas dalam Penamaan**: Judul video sering kali menggunakan bahasa yang kreatif atau gaya penulisan yang tidak konvensional.
+- **Ambiguitas**: Beberapa judul mungkin ambigu atau tidak jelas dalam menggambarkan isi video.
+- **Noise dan Irrelevansi**: Judul video mungkin mengandung kata-kata yang tidak relevan dengan topik utama.
+
+Dengan menggunakan teknik pemrosesan teks dan pembelajaran mesin, kita dapat mengatasi tantangan ini dan menghasilkan model klasifikasi yang dapat membantu dalam mengkategorikan konten video YouTube berdasarkan judul. Hal ini membuka peluang untuk pengembangan aplikasi yang lebih luas, seperti sistem rekomendasi, analisis tren, dan moderasi konten.
+
+---
+
+# Deskripsi Dataset
+Dataset ini terdiri dari judul-judul video YouTube yang dikumpulkan untuk tujuan analisis dan klasifikasi. Setiap judul video diberi label yang mewakili topik atau tema utama yang dibahas dalam video tersebut.
+
+## Struktur Dataset
+Dataset terdiri dari dua kolom utama:
+1. **Fitur**: Ini adalah judul video YouTube. Judul video biasanya merupakan teks singkat yang memberikan gambaran tentang isi video.
+2. **Label**: Ini adalah label atau kategori yang mewakili topik atau tema dari video. Label ini ditentukan berdasarkan konten video dan dapat mencakup berbagai topik, seperti:
+    - Hiburan
+    - Musik
+    - Olahraga
+    - Berita
+    - Pendidikan
+    - Teknologi
+    - Lain-lain
+
+Dataset ini disimpan dalam format CSV (Comma-Separated Values), di mana setiap baris mewakili satu video dengan judul dan label yang sesuai.
+
+## Ukuran Dataset
+Jumlah total entri (baris) dalam dataset dan jumlah kategori (label) dapat bervariasi, tergantung pada sumber data dan cakupan topik yang ingin dianalisis. Dataset ini dapat berisi ratusan hingga ribuan entri, dengan berbagai macam label yang mencerminkan keragaman konten video YouTube.
+
+## Sumber Data
+Dataset ini dikumpulkan dari judul-judul video YouTube yang dipublikasikan dalam berbagai kategori. Sumber data dapat mencakup:
+- Video yang populer atau memiliki banyak penonton.
+- Video terbaru yang diunggah di YouTube.
+- Video dari saluran (channel) tertentu dengan topik yang konsisten.
+
+## Penggunaan Dataset
+Dataset ini dapat digunakan untuk berbagai tujuan, termasuk:
+- **Pelatihan dan Evaluasi Model Pembelajaran Mesin**: Dataset ini ideal untuk melatih model pembelajaran mesin untuk klasifikasi teks, khususnya untuk mengklasifikasikan konten video berdasarkan judul.
+- **Analisis Tren**: Dengan mengkategorikan judul video berdasarkan label, kita dapat menganalisis tren populer di YouTube.
+- **Sistem Rekomendasi**: Model yang dilatih menggunakan dataset ini dapat digunakan untuk mengembangkan sistem rekomendasi yang lebih baik, membantu pengguna menemukan konten yang relevan berdasarkan minat mereka.
+- **Moderasi Konten**: Dengan klasifikasi otomatis, platform seperti YouTube dapat memoderasi konten dengan lebih efektif, mengidentifikasi video yang tidak pantas atau berbahaya.
+
+## Catatan Penting
+- Dataset ini hanya mencakup judul video, bukan konten video itu sendiri. Oleh karena itu, klasifikasi dan analisis didasarkan pada teks judul.
+- Label diberikan berdasarkan interpretasi manual atau otomatis dari topik video. Ada kemungkinan bahwa beberapa judul tidak secara akurat mencerminkan isi video, sehingga mungkin terjadi kesalahan klasifikasi.
+- Saat menggunakan dataset ini, perhatikan hak cipta dan privasi. Pastikan penggunaan data sesuai dengan pedoman dan ketentuan platform YouTube.
+
+---
+# Rancangan Pemrosesan Dataset
+Rancangan pemrosesan dataset mencakup tahap-tahap berikut:
+1. **Persiapan Data**: Memuat dataset dan memastikan data siap digunakan untuk analisis dan pembelajaran mesin.
+2. **Normalisasi dan Pemrosesan Teks**: Menyusun fungsi-fungsi yang diperlukan untuk membersihkan dan menormalisasi teks judul video.
+3. **Ekstraksi Fitur**: Mengonversi teks judul menjadi representasi numerik yang dapat digunakan oleh model pembelajaran mesin.
+4. **Pembagian Data**: Memisahkan dataset menjadi data pelatihan dan data pengujian.
+5. **Pelatihan dan Evaluasi Model**: Melatih model pembelajaran mesin dengan data pelatihan dan mengevaluasinya menggunakan data pengujian.
+6. **Tuning dan Penggunaan Pipeline**: Menggunakan pipeline untuk menggabungkan langkah-langkah dan mencari parameter terbaik untuk model.
+7. **Visualisasi Hasil dan Analisis Lanjutan**: Menggunakan visualisasi untuk memahami hasil dan melakukan analisis lanjutan.
+
+## Implementasi Pemrosesan Dataset
+Berikut adalah implementasi untuk setiap tahap dalam rancangan pemrosesan dataset.
+
+### 1. Persiapan Data
+- Muat dataset menggunakan `pandas.read_csv()`.
+- Periksa struktur dataset untuk memastikan data telah dimuat dengan benar.
+- Pisahkan dataset menjadi fitur (judul video) dan label (kategori atau tema).
+
+    ```
+    import pandas as pd
+
+    # Memuat dataset
+    dataset = pd.read_csv("Dataset for UTS.csv")
+
+    # Memeriksa struktur dataset
+    print(dataset.shape)
+
+    # Memisahkan fitur dan label
+    features = dataset['judul']  # Sesuaikan dengan nama kolom yang benar
+    labels = dataset['label']
+    ```
+
+### 2. Normalisasi dan Pemrosesan Teks
+- Mengembangkan fungsi untuk normalisasi teks, seperti ekspansi kontraksi, stemming, penghapusan karakter khusus, dan stopword removal.
+- Normalisasi dilakukan untuk mengurangi noise dalam data dan memastikan teks siap untuk ekstraksi fitur.
+
+    ```
+    import nltk
+    import re
+    import string
+    from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+    from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+    from contractions import CONTRACTION_MAP
+
+    # Tokenisasi teks
+    def tokenize_text(text):
+        tokens = nltk.word_tokenize(text)
+        return tokens
+
+    # Menghapus karakter khusus
+    def remove_special_characters(text):
+        pattern = re.compile(f"[{re.escape(string.punctuation)}]")
+        return pattern.sub("", text)
+
+    # Menghapus stopwords
+    factory = StopWordRemoverFactory()
+    stopword_list = factory.get_stop_words()
+
+    def remove_stopwords(text):
+        tokens = tokenize_text(text)
+        filtered_tokens = [token for token in tokens jika token tidak dalam stopword_list]
+        return " ".join(filtered_tokens)
+
+    # Stemming
+    def stemmer_text(text):
+        factory = StemmerFactory()
+        stemmer = factory.create_stemmer()
+        return stemmer.stem(text)
+
+    # Normalisasi teks
+    def normalize_text(text):
+        text = text.lower()  # Mengubah teks ke lowercase
+        text = remove_special_characters(text)
+        text = remove_stopwords(text)
+        text = stemmer_text(text)
+        return text
+    ```
+
+### 3. Ekstraksi Fitur Menggunakan TF-IDF
+- Mengonversi teks menjadi representasi numerik menggunakan TF-IDF.
+- TF-IDF mengukur kepentingan istilah dalam konteks dokumen dan seluruh korpus.
+
+    ```
+    from sklearn.feature_extraction.text import TfidfVectorizer
+
+    # Menggunakan TF-IDF untuk ekstraksi fitur
+    tfidf_vectorizer = TfidfVectorizer(min_df=1, norm='l2', smooth_idf=True, use_idf=True)
+    tfidf_features = tfidf_vectorizer.fit_transform(features)
+    ```
+
+### 4. Pembagian Data
+- Memisahkan dataset menjadi data pelatihan dan pengujian.
+- Pembagian ini memungkinkan evaluasi model menggunakan data yang belum pernah dilihat sebelumnya.
+
+    ```
+    from sklearn.model_selection import train_test_split
+
+    # Memisahkan data pelatihan dan pengujian
+    train_features, test_features, train_labels, test_labels = train_test_split(tfidf_features, labels, test_size=0.3, random_state=42)
+    ```
+
+### 5. Pelatihan dan Evaluasi Model
+- Melatih model pembelajaran mesin menggunakan data pelatihan.
+- Evaluasi dilakukan menggunakan data pengujian dengan metrik seperti akurasi, precision, recall, dan F1 score.
+
+    ```
+    from sklearn.linear_model import SGDClassifier
+    from sklearn import metrics
+    import numpy as np
+
+    # Melatih model dengan SGDClassifier
+    clf = SGDClassifier(loss='hinge', max_iter=100)
+    clf.fit(train_features, train_labels)
+
+    # Membuat prediksi dan mengevaluasi model
+    predictions = clf.predict(test_features)
+
+    print("Accuracy: ", np.round(metrics.accuracy_score(test_labels, predictions), 2))
+    print("Precision: ", np.round(metrics.precision_score(test_labels, predictions, average='weighted'), 2))
+    print("Recall: ", np.round(metrics.recall_score(test_labels, predictions, average='weighted'), 2))
+    print("F1 Score: ", np.round(metrics.f1_score(test_labels, predictions, average='weighted'), 2))
+    ```
+
+### 6. Tuning dan Penggunaan Pipeline
+- Menggunakan pipeline untuk menggabungkan berbagai langkah dalam pemrosesan.
+- Menggunakan GridSearchCV untuk mencari parameter terbaik untuk model.
+
+    ```
+    from sklearn.pipeline import Pipeline
+    from sklearn.feature_selection import SelectKBest, chi2
+    from sklearn.model_selection import GridSearchCV
+
+    # Membuat pipeline dengan TF-IDF, SelectKBest, dan SGDClassifier
+    pipeline = Pipeline([
+        ('tfidf', TfidfVectorizer()),
+        ('chi2', SelectKBest(chi2, k=1000)),
+        ('clf', SGDClassifier(loss='hinge', max_iter=100))
+    ])
+
+    # Parameter untuk GridSearchCV
+    parameters = {
+        'tfidf__max_df': (0.25, 0.5),
+        'tfidf__ngram_range': [(1, 1), (1, 2)],
+        'clf__alpha': (1e-2, 1e-3),
+    }
+
+    # Melakukan pencarian parameter terbaik
+    grid_search = GridSearchCV(pipeline, parameters, cv=5, n_jobs=-1)
+    grid_search.fit(train_features, train_labels)
+
+    # Evaluasi model terbaik
+    best_model = grid_search.best_estimator_
+    predictions = best_model.predict(test_features)
+
+    print("Best Accuracy: ", np.round(metrics.accuracy_score(test_labels, predictions), 2))
+    ```
+
+### 7. Visualisasi Hasil dan Analisis Lanjutan
+- Menggunakan confusion matrix untuk memvisualisasikan hasil prediksi.
+- Menganalisis hasil untuk memahami bagaimana model bekerja dan di mana mungkin perlu perbaikan.
+
+    ```
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+
+    # Membuat confusion matrix
+    conf_matrix = metrics.confusion_matrix(test_labels, predictions)
+
+    def plot_confusion_matrix(conf_matrix, labels):
+        plt.figure(figsize=(10, 7))
+        sns.heatmap(conf_matrix, annot=True, fmt='d', cmap="Blues", xticklabels=labels, yticklabels=labels)
+        plt.xlabel('Predicted Labels')
+        plt.ylabel('True Labels')
+        plt.title('Confusion Matrix')
+        plt.show()
+
+    # Memvisualisasikan confusion matrix
+    plot_confusion_matrix(conf_matrix, best_model.classes_)
+    ```
+</github-md>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag-GitHub.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+</html>
