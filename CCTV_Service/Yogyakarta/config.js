@@ -5,6 +5,7 @@ const videoDepanOpticTuguMalioboro = videojs('depan_optic_tugu_malioboro');
 const videoSungaiNgentakKaptenHaryadi = videojs('sungai_ngentak_kapten_haryadi');
 const videoDepanGaleria = videojs('depan_galeria');
 const videoSimpangDemangan_timur = videojs('simpang_demangan_hadap_timur');
+const videoSimpangJokteng_timur = videojs('simpang_jokteng');
 
 // source video link config for Video JS
 const sourceDepanStasiunTugu = {
@@ -37,6 +38,11 @@ const sourceSimpangDemangan_timur = {
     type: 'application/x-mpegURL'
 };
 
+const sourceSimpangJokteng_timur = {
+    src: "https://cctvjss.jogjakota.go.id/atcs/ATCS_joktengwetan.stream/playlist.m3u8",
+    type: 'application/x-mpegURL'
+}
+
 
 // trigger source
 videoDepanStasiunTugu.src(sourceDepanStasiunTugu);
@@ -45,3 +51,4 @@ videoDepanOpticTuguMalioboro.src(sourceDepanOpticTuguMalioboro);
 videoSungaiNgentakKaptenHaryadi.src(sourceSungaiNgentakKaptenHaryadi);
 videoDepanGaleria.src(sourceDepanGaleria);
 videoSimpangDemangan_timur.src(sourceSimpangDemangan_timur);
+videoSimpangJokteng_timur.src(sourceSimpangJokteng_timur);
