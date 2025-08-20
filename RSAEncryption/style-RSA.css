@@ -61,3 +61,15 @@
 .decrypt-btn-container p.show {
     display: block;
 }
+
+.footer {
+    width: 100%;
+    background-color: rgb(0, 60, 100);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-content {
+    color: white;
+}

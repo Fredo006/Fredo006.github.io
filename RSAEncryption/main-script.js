@@ -69,9 +69,11 @@ copyEncryptBtn.addEventListener('click', () => {
 //Decrypt side
 decryptBtn.addEventListener('click', () => {
     let dataToDecrypt = textDecrypt.value;
+    decryptProgress.innerHTML = 'Proses dekripsi sedang berlangsung...';
     if(dataToDecrypt != ''){
         let decrypted = decrypt_data(dataToDecrypt, privateKey, n_value);
         textDecryptResult.value = decrypted.join('');
+        decryptProgress.innerHTML = '';
     }
 });
 
