@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/RSAEncryption/assets/RSA_Security_logo2.svg.ico">
-    <link rel="stylesheet" href="/RSAEncryption/style-RSA.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/RSAEncryption/style-RSA.css">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -25,108 +25,143 @@
   gtag('config', 'G-ZCQYJ1JVP9');
 </script>
 <body>
-    <div class="main-container">
-        <h4>RSA Message Encryption</h4>
-        <div class="input-text-container">
-            <div class="input-to-encrypt">
-                <h5>Encrypt Message</h5>
-                <textarea name="text-to-encrypt" id="text-to-encrypt" cols="90" rows="10"></textarea>
-                <div class="public-info-input">
-                    <input type="text" class="form-control" id="public-key-input" placeholder="Insert Public Key" style="margin-bottom: 5px;">
-                    <input type="text" class="form-control" id="n-value-input" placeholder="Insert N value">
+    <nav>
+        <a href="/">Fredo Tools</a>
+        <span class="nav-sep">›</span>
+        <span class="nav-current">RSA Encryption</span>
+    </nav>
+ 
+    <div class="page">
+ 
+        <header class="hero">
+            <div class="hero-eyebrow">cryptography demo</div>
+            <h1>RSA <span>Encryption</span></h1>
+            <p class="hero-desc">
+                Enkripsi dan dekripsi pesan menggunakan algoritma RSA berbasis kunci asimetrik. 
+                Perlu di ingat bahwa ini hanya sekedar demo, bukan real use case!
+                Bisa untuk mainan pesan rahasia sehingga tidak ada yang bisa mengetahui pesan anda masing - masing,
+                namun karena angka faktorisasinya masih kecil, maka bukan tidak mungkin pihak yang lebih paham atau punya otoritas tetap bisa membukanya.
+            </p>
+        </header>
+ 
+        <!-- Input section -->
+        <p class="section-label">Input</p>
+        <div class="cols">
+ 
+            <div class="panel">
+                <div class="panel-title"><span class="icon">🔒</span> Encrypt Message</div>
+                <textarea name="text-to-encrypt" id="text-to-encrypt" placeholder="Tulis pesan yang ingin dienkripsi..."></textarea>
+                <div class="input-group">
+                    <input type="text" id="public-key-input" placeholder="Public Key">
+                    <input type="text" id="n-value-input" placeholder="N value">
                 </div>
-                <button class="btn btn-outline-light" id="encrypt-btn">Encrypt</button>
-            </div>
-            
-            <div class="input-to-decrypt">
-                <h5>Decrypt Message</h5>
-                <textarea name="data-to-decrypt" id="data-to-decrypt" cols="90" rows="10"></textarea>
-                <div class="decrypt-btn-container">
-                    <button class="btn btn-outline-light" id="decrypt-btn">Decrypt</button>
-                    <p>Decrypt in progress......</p>
+                <div>
+                    <button class="btn btn-primary" id="encrypt-btn">Encrypt →</button>
                 </div>
             </div>
-        </div>
-
-        <div class="result-container">
-            <div class="result-encrypt">
-                <h5>Hasil Enkripsi</h5>
-                <textarea name="encrypt-result" id="encrypt-result" cols="90" rows="10" readonly></textarea>
-                <button class="btn btn-outline-light" id="copy-encrypt-btn">Salin hasil enkripsi</button>
+ 
+            <div class="panel">
+                <div class="panel-title"><span class="icon">🔓</span> Decrypt Message</div>
+                <textarea name="data-to-decrypt" id="data-to-decrypt" placeholder="Tempel pesan terenkripsi di sini..."></textarea>
+                <div class="btn-row">
+                    <button class="btn btn-primary" id="decrypt-btn">Decrypt →</button>
+                    <span class="decrypt-status" id="decrypt-status">Decrypting...</span>
+                </div>
             </div>
-            
-            <div class="result-decrypt">
-                <h5>Hasil Dekripsi</h5>
-                <textarea name="decrypt-result" id="decrypt-result" cols="90" rows="10" readonly></textarea>
-                <button class="btn btn-outline-light" id="copy-decrypt-btn">Salin hasil dekripsi</button>
-            </div>
+ 
         </div>
+ 
+        <!-- Result section -->
+        <p class="section-label">Hasil</p>
+        <div class="cols">
+ 
+            <div class="panel">
+                <div class="panel-title"><span class="icon">📋</span> Encryption Result</div>
+                <textarea name="encrypt-result" id="encrypt-result" readonly placeholder="Hasil enkripsi akan muncul di sini..."></textarea>
+                <div>
+                    <button class="btn btn-ghost" id="copy-encrypt-btn">Copy Encrypted Result</button>
+                </div>
+            </div>
+ 
+            <div class="panel">
+                <div class="panel-title"><span class="icon">📋</span> Decryption Result</div>
+                <textarea name="decrypt-result" id="decrypt-result" readonly placeholder="Hasil dekripsi akan muncul di sini..."></textarea>
+                <div>
+                    <button class="btn btn-ghost" id="copy-decrypt-btn">Copy Decrypted Result</button>
+                </div>
+            </div>
+ 
+        </div>
+ 
+        <!-- Warning -->
+        <div class="warning-box">
+            <span class="warn-icon">⚠️</span>
+            <p>
+                <strong>Perhatian:</strong> Jika kamu bermain enkripsi pesan bersama teman, setiap kali halaman ini di-<em>refresh</em>
+                maka Public Key dan N value akan di-generate ulang — kamu perlu memberitahu ulang key barumu ke teman.
+                Terdapat konfirmasi sebelum refresh untuk mencegah hal ini terjadi tidak sengaja.
+            </p>
+        </div>
+ 
     </div>
-
-    <footer class="footer">
-        <div class="footer-content">
-            Created by <a href="https://fredo-code.vercel.app" target="_blank">Fredo Ronan</a>
-        </div>
+ 
+    <footer>
+        Created by <a href="https://fredo-code.vercel.app" target="_blank">Fredo Ronan</a>
     </footer>
-
-    <!-- Pop Up -->
-    <div class="modal fade show" id="modal-wrapper">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-3" id="pop-up-title">INFO!</h1>
+ 
+ 
+    <!-- ── Modal: Info Key ── -->
+    <div class="modal-overlay" id="modal-wrapper">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Public Key Kamu</h2>
+                <span class="modal-badge info">INFO</span>
+            </div>
+            <div class="modal-body">
+                <p style="font-size:0.85rem; color: var(--muted);">Salin Public Key dan N value berikut — bagikan ke lawan bicaramu agar mereka bisa mengenkripsi pesan untukmu.</p>
+                <div class="key-row">
+                    <div class="key-label">Public Key</div>
+                    <div class="key-value" id="public-key-field"></div>
                 </div>
-    
-                <div class="modal-body">
-                    <h4 class="fs-5">Salin Public Key dan N value anda ini</h4><br>
-                    <p class="fs-5" id="public-key-field"></p>
-                    <p class="fs-5" id="n-value-field"></p>
-
-                    <p class="fs-6 fst-italic" style="color: red;">
-                        PERHATIAN : <br>Jika anda tidak menyalin public key dan n value anda, anda di harapkan untuk harus mengingatnya
-                        supaya sistem enkripsi ini berhasil.<br>
-                    </p>
-
-                    <hr style="color: red;">
-
-                    <p class="fs-6" style="color: red;">
-                        JIKA ANDA BERMAIN PESAN ENKRIPSI DENGAN TEMAN ANDA, MAKA KETIKA ANDA RELOAD/REFRESH HALAMAN INI ANDA HARUS
-                        MEMBERITAHU ULANG PUBLIC KEY DAN N VALUE ANDA KE TEMAN ANDA.<br><br>
-                        *Terdapat Pop Up Konfirmasi refresh halaman ketika secara tidak sengaja refresh halaman ini.
-                    </p>
+                <div class="key-row">
+                    <div class="key-label">N Value</div>
+                    <div class="key-value" id="n-value-field"></div>
                 </div>
-    
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" id="close-btn-modal">Close</button>
-                    <button class="btn btn-primary" id="copy-public-btn">Copy</button>
+                <div class="modal-warn">
+                    ⚠️&nbsp; Jika tidak disalin sekarang, kamu harus mengingat key ini secara manual agar enkripsi berhasil.
                 </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-ghost" id="close-btn-modal">Tutup</button>
+                <button class="btn btn-primary" id="copy-public-btn">Salin Key</button>
             </div>
         </div>
     </div>
-
-    <div class="modal fade show" id="modal-wrapper-confirmation">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-3" id="pop-up-title">KONFIRMASI!</h1>
+ 
+    <!-- ── Modal: Konfirmasi Refresh ── -->
+    <div class="modal-overlay" id="modal-wrapper-confirmation">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Konfirmasi Refresh</h2>
+                <span class="modal-badge warning">PERHATIAN</span>
+            </div>
+            <div class="modal-body">
+                <p style="font-size:0.85rem; color: var(--muted);">Key aktif kamu saat ini:</p>
+                <div class="key-row">
+                    <div class="key-label">Public Key</div>
+                    <div class="key-value" id="public-key-field-confirm"></div>
                 </div>
-    
-                <div class="modal-body">
-                    <h4 class="fs-5">Public Key dan N value anda saat ini</h4><br>
-                    <p class="fs-5" id="public-key-field"></p>
-                    <p class="fs-5" id="n-value-field"></p>
-
-                    <p class="fs-6 fst-italic" style="color: red;">
-                        PERHATIAN : <br>Jika anda merefresh halaman ini maka Public Key dan N value anda sebelumnya akan
-                        tidak belaku lagi dan akan di generate Public Key dan N value anda yang baru saat halaman ini sudah
-                        refresh
-                    </p>
+                <div class="key-row">
+                    <div class="key-label">N Value</div>
+                    <div class="key-value" id="n-value-field-confirm"></div>
                 </div>
-    
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" id="cancel-btn-modal">Cancel</button>
-                    <button class="btn btn-primary" id="continue-refresh-btn">Lanjutkan refresh</button>
+                <div class="modal-warn">
+                    ⚠️&nbsp; Jika kamu melanjutkan refresh, Public Key dan N value di atas akan <strong>tidak berlaku lagi</strong> dan akan di-generate ulang.
                 </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-ghost" id="cancel-btn-modal">Batal</button>
+                <button class="btn btn-primary" id="continue-refresh-btn">Lanjutkan Refresh</button>
             </div>
         </div>
     </div>

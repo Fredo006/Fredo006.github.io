@@ -93,7 +93,7 @@ copyDecryptBtn.addEventListener('click', () => {
 let modalWrapperPopUp = document.getElementById('modal-wrapper');
 
 window.onload = function(event){
-    modalWrapperPopUp.style.display = 'block';
+    modalWrapperPopUp.style.display = 'flex';
     modalWrapperPopUp.style.backgroundColor = 'rgba(0, 0, 0, 0.327)';
 };
 
@@ -106,7 +106,7 @@ window.addEventListener('beforeunload', (e) => {
     if(e) {
         e.returnValue = '';
         e.preventDefault();
-        modalWrapperConfirm.style.display = 'block';
+        modalWrapperConfirm.style.display = 'flex';
         modalWrapperConfirm.style.backgroundColor = 'rgba(0, 0, 0, 0.327)';
     }
 });

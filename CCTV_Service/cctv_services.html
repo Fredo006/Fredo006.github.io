@@ -3,22 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/CCTV_Service/cctv_services_style.css">
     <link rel="icon" type="image/x-icon" href="/assets/fr-icon.ico">
-    <title>CCTV Services</title>
+    <title>CCTV Services · Fredo Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./cctv_services_style.css">
 </head>
 <body>
-    <div class="main-container">
-        <div class="services">
-            <h2 class="fs-1" id="header">CCTV Services</h2>
-            <p class="fs-4" style="margin-bottom: 5rem;">Choose City</p>
-            <div class="services-container">
-                <a href="/CCTV_Service/Sleman/cctv_sleman.html" target="_blank"><button class="btn btn-primary fs-5">Sleman</button></a>
-                <a href="/CCTV_Service/Yogyakarta/cctv_kota_jogja.html" target="_blank"><button class="btn btn-primary fs-5">Kota Yogyakarta</button></a>
-            </div>
+
+    <nav>
+        <a href="/">Fredo Tools</a>
+        <span class="nav-sep">›</span>
+        <span class="nav-current">CCTV Services</span>
+    </nav>
+
+    <div class="page">
+
+        <header class="hero">
+            <div class="hero-eyebrow">live feed</div>
+            <h1>CCTV <span>Services</span></h1>
+            <p class="hero-desc">Akses live CCTV publik dari berbagai kota. Pilih kota di bawah.</p>
+        </header>
+
+        <p class="section-label">Pilih Kota</p>
+
+        <div class="grid">
+
+            <a class="card disabled" href="/CCTV_Service/Sleman/cctv_sleman.html" target="_blank">
+                <div class="card-icon">📹</div>
+                <div class="card-title">Sleman</div>
+                <div class="card-desc">Live CCTV Kabupaten Sleman, D.I. Yogyakarta.</div>
+                <span class="card-arrow">↗</span>
+                <div class="badge-deprecated">Deprecated</div>
+            </a>
+
+            <a class="card" href="/CCTV_Service/Yogyakarta/cctv_kota_jogja.html" target="_blank">
+                <div class="card-icon">🏙️</div>
+                <div class="card-title">Kota Yogyakarta</div>
+                <div class="card-desc">Live CCTV Kota Yogyakarta.</div>
+                <span class="card-arrow">↗</span>
+            </a>
         </div>
+
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <footer>
+        Created by <a href="https://fredo-code.vercel.app" target="_blank">Fredo Ronan</a>
+    </footer>
+
 </body>
 </html>

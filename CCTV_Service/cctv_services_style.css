@@ -1,26 +1,283 @@
-*, html {
-    padding: 0;
-    margin: 0;
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --bg:           #0d0d0f;
+    --surface:      #16161a;
+    --border:       #252530;
+    --accent:       #7c6af7;
+    --accent-glow:  rgba(124, 106, 247, 0.18);
+    --accent-light: #b79fff;
+    --text:         #e2e0f0;
+    --muted:        #7b798f;
+    --disabled-text:#4d4b5e;
 }
 
 body {
-    background-color: rgb(37, 83, 118);
-}
-
-.services {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 2rem;
-    padding-left: 5rem;
-    color: white;
 }
 
-.services-container {
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 40% at 20% 10%, rgba(124,106,247,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 30% at 80% 80%, rgba(79,255,176,0.05) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── Nav ── */
+nav {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.25rem 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+nav a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+nav a:hover { color: var(--text); }
+.nav-sep { color: var(--border); font-size: 0.8rem; }
+.nav-current {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-light);
+}
+
+/* ── Page ── */
+.page {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 6rem;
+}
+
+/* ── Hero ── */
+.hero { margin-bottom: 3.5rem; }
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+.hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 20px; height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+h1 span {
+    background: linear-gradient(100deg, var(--accent), var(--accent-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-desc {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+/* ── Section label ── */
+.section-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+}
+
+/* ── Grid ── */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* ── Card ── */
+.card {
+    position: relative;
+    background: var(--surface);
+    padding: 1.6rem 1.5rem;
+    text-decoration: none;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
+    transition: background 0.25s;
+    overflow: hidden;
 }
 
-a {
-    max-width: max-content;
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent-glow);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.card:hover::after { opacity: 1; }
+.card:hover .card-arrow { transform: translate(3px, -3px); opacity: 1; }
+
+.card-icon { font-size: 1.4rem; line-height: 1; }
+
+.card-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.card-desc {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+}
+
+.card-arrow {
+    position: absolute;
+    top: 1.25rem; right: 1.25rem;
+    color: var(--accent);
+    opacity: 0;
+    transition: transform 0.2s, opacity 0.2s;
+    font-size: 1rem;
+}
+
+/* ── Disabled card ── */
+.card.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.card.disabled .card-title { color: var(--disabled-text); }
+.card.disabled .card-icon { opacity: 0.3; }
+
+/* ══════════════════════════════
+    BADGES — siap pakai
+    Penggunaan: <div class="badge-X">Label</div>
+══════════════════════════════ */
+
+/* Base badge — tidak dipakai langsung */
+[class^="badge-"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 100px;
+    padding: 2px 9px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+}
+
+[class^="badge-"]::before {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* 🟢 In Progress */
+.badge-in-progress {
+    color: #4fffb0;
+    background: rgba(79, 255, 176, 0.08);
+    border: 1px solid rgba(79, 255, 176, 0.2);
+}
+.badge-in-progress::before {
+    background: #4fffb0;
+    animation: pulse 2s infinite;
+}
+
+/* 🟡 Maintenance */
+.badge-maintenance {
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.08);
+    border: 1px solid rgba(251, 191, 36, 0.2);
+}
+.badge-maintenance::before {
+    background: #fbbf24;
+    animation: pulse 1.4s infinite;
+}
+
+/* 🔴 Deprecated */
+.badge-deprecated {
+    color: #f87171;
+    background: rgba(248, 113, 113, 0.08);
+    border: 1px solid rgba(248, 113, 113, 0.2);
+}
+.badge-deprecated::before {
+    background: #f87171;
+    /* dot statis — tidak ada aktivitas */
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.25; }
+}
+
+/* ── Footer ── */
+footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+}
+footer a { color: var(--accent-light); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+@media (max-width: 480px) {
+    .grid { grid-template-columns: 1fr; }
 }

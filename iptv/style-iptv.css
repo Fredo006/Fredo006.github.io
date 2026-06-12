@@ -33,7 +33,7 @@ body::before {
     z-index: 0;
 }
 
-/* ── Nav ── */
+/* Nav */
 nav {
     position: relative;
     z-index: 10;
@@ -43,7 +43,6 @@ nav {
     padding: 1.25rem 2rem;
     border-bottom: 1px solid var(--border);
 }
-
 nav a {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 0.8rem;
@@ -61,27 +60,28 @@ nav a:hover { color: var(--text); }
     color: var(--accent-light);
 }
 
-/* ── Page ── */
+/* Page */
 .page {
     position: relative;
     z-index: 1;
     flex: 1;
     width: 100%;
-    max-width: 1300px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 3.5rem 1.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-/* ── Hero ── */
+/* Hero */
 .hero {
-    margin-bottom: 3rem;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    gap: 1rem;
     flex-wrap: wrap;
+    gap: 1rem;
 }
-
 .hero-eyebrow {
     display: inline-flex;
     align-items: center;
@@ -101,7 +101,6 @@ nav a:hover { color: var(--text); }
     background: var(--accent);
     border-radius: 2px;
 }
-
 h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(1.8rem, 4vw, 2.8rem);
@@ -111,20 +110,14 @@ h1 {
     margin-bottom: 0.4rem;
     line-height: 1.1;
 }
-
 h1 span {
     background: linear-gradient(100deg, var(--accent), var(--accent-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+.hero-desc { font-size: 0.85rem; color: var(--muted); }
 
-.hero-desc {
-    font-size: 0.85rem;
-    color: var(--muted);
-}
-
-/* ── Live indicator ── */
 .live-pill {
     display: inline-flex;
     align-items: center;
@@ -140,9 +133,7 @@ h1 span {
     border-radius: 100px;
     padding: 5px 12px;
     align-self: flex-start;
-    margin-top: 4px;
 }
-
 .live-pill::before {
     content: '';
     width: 6px; height: 6px;
@@ -150,22 +141,31 @@ h1 span {
     background: var(--live-red);
     animation: livepulse 1.5s infinite;
 }
-
 @keyframes livepulse {
     0%, 100% { opacity: 1; transform: scale(1); }
     50%       { opacity: 0.4; transform: scale(0.8); }
 }
 
-/* ── Section label ── */
-.section-label {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 1.25rem;
+/* ── Input ── */
+input[type="text"] {
+    width: 100%;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    padding: 0.6rem 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
+
+input[type="text"]:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+input::placeholder { color: var(--muted); }
 
 /* ── Video grid ── */
 .grid {
@@ -178,22 +178,19 @@ h1 span {
     .grid { grid-template-columns: 1fr; }
 }
 
-/* ── Video card ── */
-.video-card {
+/* Player card */
+.player-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 16px;
     overflow: hidden;
-    transition: border-color 0.25s, box-shadow 0.25s;
 }
 
-.video-card:hover {
-    border-color: rgba(124, 106, 247, 0.4);
-    box-shadow: 0 0 0 1px rgba(124,106,247,0.1), 0 8px 32px rgba(0,0,0,0.4);
+.player-card.hide {
+    display: none;
 }
 
-/* Override video-js to fill card */
-.video-card .video-js {
+.player-card .video-js {
     width: 100% !important;
     height: auto !important;
     aspect-ratio: 16 / 9;
@@ -201,51 +198,90 @@ h1 span {
     background: #000;
 }
 
-.video-card .vjs-tech {
-    width: 100%;
-    height: 100%;
-}
-
-.video-info {
-    padding: 0.9rem 1.1rem;
+/* Player footer */
+.player-footer {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--border);
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.video-dot {
+.now-playing {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 0;
+}
+.now-playing::before {
+    content: '';
     width: 7px; height: 7px;
     border-radius: 50%;
     background: var(--live-red);
-    flex-shrink: 0;
     animation: livepulse 1.5s infinite;
+    flex-shrink: 0;
 }
-
-.video-title {
+.now-playing-name {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    color: var(--text);
-    line-height: 1.3;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* ── Footer ── */
+/* Select */
+.select-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+.select-wrap::after {
+    content: '▾';
+    position: absolute;
+    right: 0.9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 0.75rem;
+    pointer-events: none;
+}
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0.55rem 2.2rem 0.55rem 0.9rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    min-width: 210px;
+}
+select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+select option, select optgroup {
+    background: #1c1c22;
+    color: var(--text);
+}
+
+/* Footer */
 footer {
     position: relative;
     z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    text-align: center;
     padding: 1.25rem 2rem;
     font-size: 0.78rem;
     color: var(--muted);
     border-top: 1px solid var(--border);
 }
-
-footer a {
-    color: var(--accent-light);
-    text-decoration: none;
-}
+footer a { color: var(--accent-light); text-decoration: none; }
 footer a:hover { text-decoration: underline; }
