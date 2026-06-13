@@ -4,6 +4,10 @@ const list_cctv_jogja = [
         link: "https://cctvjss.jogjakota.go.id/margo-utomo/Wisma-Ratih.stream/playlist.m3u8"
     },
     {
+        title: "Alun - Alun Kidul",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-public/ViewAlunAlunKidul.stream/playlist.m3u8"
+    },
+    {
         title: "Depan Mall Malioboro Hadap Utara",
         link: "https://cctvjss.jogjakota.go.id/malioboro/Malioboro_6_Mall_Utara.stream/playlist.m3u8"
     },
@@ -18,6 +22,14 @@ const list_cctv_jogja = [
     {
         title: "Depan Galeria",
         link: "https://cctvjss.jogjakota.go.id/atcs/ATCS_Simpang_Galeria_TimurSelatan.stream/playlist.m3u8"
+    },
+    {
+        title: "Babarsari 1",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/Babarsari1.stream/playlist.m3u8"
+    },
+    {
+        title: "Bandara Adisucipto Hadap Timur",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/atcs/BandaraTimur.stream/playlist.m3u8"
     },
     {
         title: "Simpang Demangan Hadap Timur",

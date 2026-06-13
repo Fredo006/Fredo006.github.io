@@ -1,7 +1,11 @@
 const list_cctv_sleman = [
     {
+        title: "Simpang Denggung",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/atcs/Denggung.stream/playlist.m3u8"
+    },
+    {
         title: "Denggung Hadap Utara",
-        link: "http://103.71.191.168/8881/hls/live.stream.m3u8"
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/DenggungUtara.stream/playlist.m3u8"
     },
     {
         title: "Denggung Hadap Selatan",
@@ -10,6 +14,14 @@ const list_cctv_sleman = [
     {
         title: "Denggung Hadap Timur",
         link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/DenggungTimur.stream/playlist.m3u8"
+    },
+    {
+        title: "Lapangan Denggung Hadap Selatan",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/LapDenggungUtara.stream/playlist.m3u8"
+    },
+    {
+        title: "Lapangan Denggung Hadap Utara",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/LapDenggungSelatan.stream/playlist.m3u8"
     },
     {
         title: "Merapi Bronggang",

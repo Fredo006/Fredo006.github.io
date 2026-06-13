@@ -16,7 +16,7 @@ const tools_data = [
         isDeprecated: false,
         isInProgress: false,
         isDisabled: false,
-        link: "/CCTV_Service/cctv_services.html",
+        link: "/cctv/cctv_services.html",
         target: "",
     },
     {

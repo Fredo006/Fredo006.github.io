@@ -1,6 +1,18 @@
 // root element
 const grid = document.querySelector(".grid");
 
+function getRandomString(length) {
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    let result = "";
+
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        result += characters.charAt(randomIndex);
+    }
+
+    return result;
+}
+
 class IPTV {
     constructor(tvName, url, htmlElement) {
         this.tvName = tvName;
@@ -9,12 +21,13 @@ class IPTV {
     }
 }
 
-function generateIPTVCard(name, url) {
+function generateIPTVCard(name, url, id) {
     const playerCard = document.createElement('div');
     playerCard.className = "player-card";
 
     const video = document.createElement('video');
     video.className = "video-js vjs-default-skin";
+    video.id = id;
     video.controls = true;
     video.preload = 'auto';
     const source = document.createElement('source');
@@ -37,6 +50,16 @@ function generateIPTVCard(name, url) {
 
     grid.appendChild(playerCard);
 
+    // Video JS
+    const constructedVideoJS = videojs(id);
+    const sourceForVideoJS = {
+        src: url,
+        type: "application/x-mpegURL"
+    }
+
+    // trigger video js
+    constructedVideoJS.src(sourceForVideoJS);
+
     return playerCard;
 }
 
@@ -44,7 +67,7 @@ let arrayOfIPTV = [];
 
 iptv_list.forEach((iptv) => {
     arrayOfIPTV.push(
-        new IPTV(iptv.name, iptv.url, generateIPTVCard(iptv.name, iptv.url))
+        new IPTV(iptv.name, iptv.url, generateIPTVCard(iptv.name, iptv.url, getRandomString(4)))
     )
 });
 
