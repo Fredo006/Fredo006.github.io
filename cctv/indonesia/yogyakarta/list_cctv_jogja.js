@@ -4,8 +4,28 @@ const list_cctv_jogja = [
         link: "https://cctvjss.jogjakota.go.id/margo-utomo/Wisma-Ratih.stream/playlist.m3u8"
     },
     {
+        title: "Tugu dari atas",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-public/ViewTugu.stream/playlist.m3u8"
+    },
+    {
+        title: "Tugu view simpang",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-public/ViewSimpangTugu.stream/playlist.m3u8"
+    },
+    {
+        title: "Tugu",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/atcs/Tugu2.stream/playlist.m3u8"
+    },
+    {
         title: "Alun - Alun Kidul",
         link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-public/ViewAlunAlunKidul.stream/playlist.m3u8"
+    },
+    {
+        title: "Titik Nol Kilometer (view dari BNI)",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-public/ViewNolKilo.stream/playlist.m3u8"
+    },
+    {
+        title: "Titik Nol Kilometer hadap BNI",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/atcs-kota/KMNol.stream/playlist.m3u8"
     },
     {
         title: "Depan Mall Malioboro Hadap Utara",
@@ -22,6 +42,10 @@ const list_cctv_jogja = [
     {
         title: "Depan Galeria",
         link: "https://cctvjss.jogjakota.go.id/atcs/ATCS_Simpang_Galeria_TimurSelatan.stream/playlist.m3u8"
+    },
+    {
+        title: "Simpang UKDW",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/atcs-kota/UKDW.stream/playlist.m3u8"
     },
     {
         title: "Babarsari 1",
@@ -122,5 +146,17 @@ const list_cctv_jogja = [
     {
         title: "Simpang Seturan Selokan Mataram",
         link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/SimpangSeturan2.stream/playlist.m3u8"
+    },
+    {
+        title: "Blok O",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/atcs/BlokO.stream/playlist.m3u8"
+    },
+    {
+        title: "Mirota Kampus UGM",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/atcs-kota/MirotaKampus.stream/playlist.m3u8"
+    },
+    {
+        title: "Tebing Breksi",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-public/ViewBreksi.stream/playlist.m3u8"
     }
 ];

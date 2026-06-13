@@ -24,6 +24,14 @@ const list_cctv_sleman = [
         link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/LapDenggungSelatan.stream/playlist.m3u8"
     },
     {
+        title: "Pertigaan Lapangan Denggung",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/PertigaanLapDenggungTimur.stream/playlist.m3u8"
+    },
+    {
+        title: "Denggung Hadap Sleman City Hall (SCH)",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/SlemanCityHall.stream/playlist.m3u8"
+    },
+    {
         title: "Merapi Bronggang",
         link: "http://103.71.191.168/8910/hls/live.stream.m3u8"
     },
@@ -60,11 +68,39 @@ const list_cctv_sleman = [
         link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/PosPolisi_Jombor.stream/playlist.m3u8"
     },
     {
+        title: "Fly Over Jombor timur",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/FlyOver_JomborTimur.stream/playlist.m3u8"
+    },
+    {
+        title: "Fly Over Jombor utara",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/FlyOver_JomborUtara.stream/playlist.m3u8"
+    },
+    {
+        title: "Fly Over Jombor barat",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/FlyOver_JomborBarat.stream/playlist.m3u8"
+    },
+    {
         title: "RingRoad Monjali Hadap Barat",
         link: "https://cctv.jogjaprov.go.id/cctv-proxy/atcs/Monjali.stream/playlist.m3u8"
     },
     {
         title: "Simpang Monjali Hadap Selatan",
         link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/Perempatan_Monjali.stream/playlist.m3u8"
+    },
+    {
+        title: "Tugu Urang Kaliurang",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/TuguKaliurang.stream/playlist.m3u8"
+    },
+    {
+        title: "Kaliurang Arah Jogja",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/TuguKaliurangJogja.stream/playlist.m3u8"
+    },
+    {
+        title: "Kaliurang Arah Wisma",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-kominfosleman/TuguKaliurangWisma.stream/playlist.m3u8"
+    },
+    {
+        title: "Merapi View Klangon",
+        link: "https://cctv.jogjaprov.go.id/cctv-proxy/cctv-public/ViewBukitKlangon.stream/playlist.m3u8"
     }
 ]
