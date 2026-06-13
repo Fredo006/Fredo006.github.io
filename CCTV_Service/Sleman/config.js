@@ -12,7 +12,8 @@ function getRandomString(length) {
     return result;
 }
 
-class CCTVJogja {
+
+class CCTVSleman {
     constructor(title, link, htmlElement) {
         this.title = title;
         this.link = link;
@@ -64,37 +65,31 @@ function generateCCTVJogjaCard(title, link, id) {
     return videoCard;
 }
 
-let arrayOfCCTVJogja = [];
+let arrayOfCCTVSleman = [];
 
-list_cctv_jogja.forEach((cctv) => {
-    arrayOfCCTVJogja.push(
-        new CCTVJogja(
+list_cctv_sleman.forEach((cctv) => {
+    arrayOfCCTVSleman.push(
+        new CCTVSleman(
             cctv.title,
             cctv.link,
-            generateCCTVJogjaCard(
-                cctv.title,
-                cctv.link,
-                getRandomString(4)
-            )
+            generateCCTVJogjaCard(cctv.title, cctv.link, getRandomString(4))
         )
     )
-})
-
+});
 
 const searchInput = document.querySelector('.search');
 
 searchInput.addEventListener('input', e => {
     const value = e.target.value.toLowerCase();
-    arrayOfCCTVJogja.forEach(cctv => {
+    arrayOfCCTVSleman.forEach(cctv => {
         // console.log(iptv);
         const isFound = cctv.title.toLowerCase().includes(value);
         cctv.htmlElement.classList.toggle('hide', !isFound);
     })
 })
 
-
 const sectionCountLabel = document.querySelector('.section-label');
-sectionCountLabel.innerText = `${list_cctv_jogja.length} active ${list_cctv_jogja.length > 1 ? 'cameras' : 'camera'}`;
+sectionCountLabel.innerText = `${list_cctv_sleman.length} active ${list_cctv_sleman.length > 1 ? 'cameras' : 'camera'}`;
 
 
 // // constructor Video JS

@@ -178,6 +178,28 @@ h1 span {
     .grid { grid-template-columns: 1fr; }
 }
 
+
+/* ── Input ── */
+input[type="text"] {
+    width: 100%;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    padding: 0.6rem 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+
+
 /* ── Video card ── */
 .video-card {
     background: var(--surface);
@@ -185,6 +207,10 @@ h1 span {
     border-radius: 14px;
     overflow: hidden;
     transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.video-card.hide {
+    display: none;
 }
 
 .video-card:hover {

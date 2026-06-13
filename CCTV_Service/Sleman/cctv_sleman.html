@@ -1,68 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>CCTV Website Sleman</title>
+    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
+    <title>CCTV Sleman · Fredo Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="head">
-        <center><strong>Pantauan CCTV Sleman</strong></center>
+    <nav>
+        <a href="/">Fredo Tools</a>
+        <span class="nav-sep">›</span>
+        <a href="/CCTV_Service/cctv_services.html">CCTV Services</a>
+        <span class="nav-sep">›</span>
+        <span class="nav-current">Sleman</span>
+    </nav>
+
+    <div class="page">
+
+        <header class="hero">
+            <div class="hero-left">
+                <div class="hero-eyebrow">live cctv</div>
+                <h1>Sleman</span></h1>
+                <p class="hero-desc">Pantauan CCTV publik Sleman secara real-time.</p>
+            </div>
+            <div class="live-pill">Live</div>
+        </header>
+
+        <p class="section-label"></p>
+
+        <div style="margin-top: 2rem; margin-bottom: 2rem;">
+            <input type="text" class="search" placeholder="Search CCTV..."/>
+        </div>
+
+        <div class="grid"></div>
     </div>
 
-    <div class="video-container">
-        <!-- <div class="video-box">
-            <iframe src="http://103.71.191.168/8880/player.html"></iframe><br>
-            <strong>Denggung 1</strong>
-        </div> -->
+    <footer>
+        <span>Layout by <a href="https://fredo-ronan.github.io/" target="_blank">Fredo Ronan</a></span>
+    </footer>
 
-        <div class="video-box">
-            <iframe src="http://103.71.191.168/8881/player.html"></iframe><br>
-            <!-- <iframe src="https://proxy-http-server.vercel.app/denggung_utara"></iframe><br> -->
-            <strong>Denggung Hadap Utara</strong>
-        </div>
-
-        <!--<div class="video-box">
-            <iframe src="http://103.71.191.168/8883/player.html"></iframe><br>
-            <strong>Denggung 3</strong>
-        </div> -->
-        
-        <!-- <div class="video-box">
-            <iframe src="http://103.71.191.168/8914/player.html"></iframe><br>
-            <strong>Tugu Urang (Kaliurang)</strong>
-        </div> -->
-
-        <!-- <div class="video-box">
-            <iframe src="http://103.71.191.168/8884/player.html"></iframe><br>
-            <strong>Taman Denggung</strong>
-        </div> -->
-
-        <div class="video-box">
-            <iframe src="http://103.71.191.168/8910/player.html"></iframe><br>
-            <strong>Merapi Broggang</strong>
-        </div>
-
-        <div class="video-box">
-            <iframe src="http://103.71.191.168/8889/player.html"></iframe><br>
-            <strong>Jalan Magelang Murangan hadap utara</strong>
-        </div>
-
-        <div class="video-box">
-            <iframe src="http://103.71.191.168/8912/player.html"></iframe><br>
-            <strong>Amplaz</strong>
-        </div>
-    </div>
-
-    <div class="footer">
-        <center>layout by Fredo</center>
-    </div>
-
-    <script>
-        // setTimeout(() => {
-        //     document.location.reload();
-        // }, 30000);
-    </script>
+    <script src="./list_cctv_sleman.js"></script>
+    <script src="./config.js"></script>
 </body>
 </html>

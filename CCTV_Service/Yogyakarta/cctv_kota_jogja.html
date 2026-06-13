@@ -16,7 +16,7 @@
         <span class="nav-sep">›</span>
         <a href="/CCTV_Service/cctv_services.html">CCTV Services</a>
         <span class="nav-sep">›</span>
-        <span class="nav-current">Kota Yogyakarta</span>
+        <span class="nav-current">Yogyakarta</span>
     </nav>
 
     <div class="page">
@@ -24,87 +24,19 @@
         <header class="hero">
             <div class="hero-left">
                 <div class="hero-eyebrow">live cctv</div>
-                <h1>Kota <span>Yogyakarta</span></h1>
-                <p class="hero-desc">Pantauan CCTV publik Kota Yogyakarta secara real-time.</p>
+                <h1>Yogyakarta</h1>
+                <p class="hero-desc">Pantauan CCTV publik Yogyakarta secara real-time.</p>
             </div>
             <div class="live-pill">Live</div>
         </header>
 
-        <p class="section-label">7 kamera aktif</p>
+        <p class="section-label"></p>
 
-        <div class="grid">
-
-            <div class="video-card">
-                <video id="depan_stasiun_tugu" class="video-js vjs-default-skin" controls preload="auto">
-                    <source src="https://cctvjss.jogjakota.go.id/margo-utomo/Wisma-Ratih.stream/playlist.m3u8" type="application/x-mpegURL">
-                </video>
-                <div class="video-info">
-                    <div class="video-dot"></div>
-                    <div class="video-title">Depan Stasiun Tugu</div>
-                </div>
-            </div>
-
-            <div class="video-card">
-                <video id="depan_mall_malioboro" class="video-js vjs-default-skin" controls preload="auto">
-                    <source src="https://cctvjss.jogjakota.go.id/malioboro/Malioboro_6_Mall_Utara.stream/playlist.m3u8" type="application/x-mpegURL">
-                </video>
-                <div class="video-info">
-                    <div class="video-dot"></div>
-                    <div class="video-title">Depan Mall Malioboro Hadap Utara</div>
-                </div>
-            </div>
-
-            <div class="video-card">
-                <video id="depan_optic_tugu_malioboro" class="video-js vjs-default-skin" controls preload="auto">
-                    <source src="https://cctvjss.jogjakota.go.id/margo-utomo/Optic-Tugu.stream/playlist.m3u8" type="application/x-mpegURL">
-                </video>
-                <div class="video-info">
-                    <div class="video-dot"></div>
-                    <div class="video-title">Depan Optic Tugu Malioboro</div>
-                </div>
-            </div>
-
-            <div class="video-card">
-                <video id="sungai_ngentak_kapten_haryadi" class="video-js vjs-default-skin" controls preload="auto">
-                    <source src="https://cctvjss.jogjakota.go.id/bpbd/BPBD_ngentak.stream/playlist.m3u8" type="application/x-mpegURL">
-                </video>
-                <div class="video-info">
-                    <div class="video-dot"></div>
-                    <div class="video-title">Sungai Ngentak Kapten Haryadi</div>
-                </div>
-            </div>
-
-            <div class="video-card">
-                <video id="depan_galeria" class="video-js vjs-default-skin" controls preload="auto">
-                    <source src="https://cctvjss.jogjakota.go.id/atcs/ATCS_Simpang_Galeria_TimurSelatan.stream/playlist.m3u8" type="application/x-mpegURL">
-                </video>
-                <div class="video-info">
-                    <div class="video-dot"></div>
-                    <div class="video-title">Depan Galeria</div>
-                </div>
-            </div>
-
-            <div class="video-card">
-                <video id="simpang_demangan_hadap_timur" class="video-js vjs-default-skin" controls preload="auto">
-                    <source src="https://cctvjss.jogjakota.go.id/atcs/ATCS_Simpang_Demangan_View_Timur.stream/playlist.m3u8" type="application/x-mpegURL">
-                </video>
-                <div class="video-info">
-                    <div class="video-dot"></div>
-                    <div class="video-title">Simpang Demangan Hadap Timur</div>
-                </div>
-            </div>
-
-            <div class="video-card">
-                <video id="simpang_jokteng" class="video-js vjs-default-skin" controls preload="auto">
-                    <source src="https://cctvjss.jogjakota.go.id/atcs/ATCS_joktengwetan.stream/playlist.m3u8" type="application/x-mpegURL">
-                </video>
-                <div class="video-info">
-                    <div class="video-dot"></div>
-                    <div class="video-title">Simpang Jokteng — Arah Jogja Tronik Hadap Timur</div>
-                </div>
-            </div>
-
+        <div style="margin-top: 2rem; margin-bottom: 2rem;">
+            <input type="text" class="search" placeholder="Search CCTV..."/>
         </div>
+
+        <div class="grid"></div>
     </div>
 
     <footer>
@@ -112,6 +44,7 @@
         <span>Sumber: <a href="https://cctv.jogjakota.go.id/" target="_blank">CCTV Berbasis Kewilayahan Kota Yogyakarta</a></span>
     </footer>
 
-    <script src="config.js"></script>
+    <script src="./list_cctv_jogja.js"></script>
+    <script src="./config.js"></script>
 </body>
 </html>

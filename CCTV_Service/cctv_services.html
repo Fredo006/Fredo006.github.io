@@ -22,28 +22,16 @@
         <header class="hero">
             <div class="hero-eyebrow">live feed</div>
             <h1>CCTV <span>Services</span></h1>
-            <p class="hero-desc">Akses live CCTV publik dari berbagai kota. Pilih kota di bawah.</p>
+            <p class="hero-desc">Access publicly available CCTV Streams worldwide.</p>
         </header>
 
-        <p class="section-label">Pilih Kota</p>
+        <p class="section-label">Choose City</p>
 
-        <div class="grid">
-
-            <a class="card disabled" href="/CCTV_Service/Sleman/cctv_sleman.html" target="_blank">
-                <div class="card-icon">📹</div>
-                <div class="card-title">Sleman</div>
-                <div class="card-desc">Live CCTV Kabupaten Sleman, D.I. Yogyakarta.</div>
-                <span class="card-arrow">↗</span>
-                <div class="badge-deprecated">Deprecated</div>
-            </a>
-
-            <a class="card" href="/CCTV_Service/Yogyakarta/cctv_kota_jogja.html" target="_blank">
-                <div class="card-icon">🏙️</div>
-                <div class="card-title">Kota Yogyakarta</div>
-                <div class="card-desc">Live CCTV Kota Yogyakarta.</div>
-                <span class="card-arrow">↗</span>
-            </a>
+        <div>
+            <input type="text" class="search" placeholder="Search CCTV..."/>
         </div>
+
+        <div class="grid"></div>
 
     </div>
 
@@ -51,5 +39,7 @@
         Created by <a href="https://fredo-code.vercel.app" target="_blank">Fredo Ronan</a>
     </footer>
 
+    <script src="./cctv_services_list.js"></script>
+    <script src="./cctv_services.js"></script>
 </body>
 </html>
