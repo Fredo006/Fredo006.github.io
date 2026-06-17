@@ -18,6 +18,33 @@ const list_cctv_services = [
         link: "/cctv/indonesia/yogyakarta/cctv_kota_jogja.html"
     },
     {
+        title: "[Indonesia] Magelang",
+        icon: "📹",
+        description: "Live CCTV Magelang.",
+        isDisabled: false,
+        isDeprecated: false,
+        isMaintenance: false,
+        link: "/cctv/indonesia/magelang/cctv_magelang.html"
+    },
+    {
+        title: "[Indonesia] Wonosobo",
+        icon: "📹",
+        description: "Live CCTV Wonosobo.",
+        isDisabled: false,
+        isDeprecated: false,
+        isMaintenance: false,
+        link: "/cctv/indonesia/wonosobo/cctv_wonosobo.html"
+    },
+    {
+        title: "[Indonesia] Bandung",
+        icon: "📹",
+        description: "Live CCTV Bandung.",
+        isDisabled: true,
+        isDeprecated: false,
+        isMaintenance: true,
+        link: "/cctv/indonesia/bandung/cctv_bandung.html"
+    },
+    {
         title: "[America] United States of America",
         icon: "📹",
         description: "Live CCTV United States of America",
