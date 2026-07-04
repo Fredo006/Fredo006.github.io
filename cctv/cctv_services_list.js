@@ -36,6 +36,15 @@ const list_cctv_services = [
         link: "/cctv/indonesia/wonosobo/cctv_wonosobo.html"
     },
     {
+        title: "[Indonesia] Purwokerto (Banyumas)",
+        icon: "📹",
+        description: "Live Cctv Purwokerto",
+        isDisabled: false,
+        isDeprecated: false,
+        isMaintenance: false,
+        link: "/cctv/indonesia/purwokerto/cctv_purwokerto.html"
+    },
+    {
         title: "[Indonesia] Bandung",
         icon: "📹",
         description: "Live CCTV Bandung.",

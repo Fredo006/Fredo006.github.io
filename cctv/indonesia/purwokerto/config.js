@@ -12,7 +12,8 @@ function getRandomString(length) {
     return result;
 }
 
-class CCTV {
+
+class CCTVSleman {
     constructor(title, link, htmlElement) {
         this.title = title;
         this.link = link;
@@ -33,7 +34,7 @@ function generateCCTVJogjaCard(title, link, id) {
     
     const source = document.createElement('source');
     source.src = link;
-    // source.type = "application/x-mpegURL";
+    source.type = "application/x-mpegURL";
     video.appendChild(source);
     videoCard.appendChild(video);
 
@@ -52,34 +53,29 @@ function generateCCTVJogjaCard(title, link, id) {
     grid.appendChild(videoCard);
 
     // Video JS
-    // const constructedVideoJS = videojs(id);
-    // const sourceForVideoJS = {
-    //     src: link,
-    //     type: "application/x-mpegURL"
-    // }
+    const constructedVideoJS = videojs(id);
+    const sourceForVideoJS = {
+        src: link,
+        type: "application/x-mpegURL"
+    }
 
-    // // trigger video js
-    // constructedVideoJS.src(sourceForVideoJS);
+    // trigger video js
+    constructedVideoJS.src(sourceForVideoJS);
 
     return videoCard;
 }
 
 let arrayOfCCTV = [];
 
-list_cctv_us.forEach((cctv) => {
+list_cctv_purwokerto.forEach((cctv) => {
     arrayOfCCTV.push(
-        new CCTV(
+        new CCTVSleman(
             cctv.title,
             cctv.link,
-            generateCCTVJogjaCard(
-                cctv.title,
-                cctv.link,
-                getRandomString(4)
-            )
+            generateCCTVJogjaCard(cctv.title, cctv.link, getRandomString(4))
         )
     )
-})
-
+});
 
 const searchInput = document.querySelector('.search');
 
@@ -92,6 +88,5 @@ searchInput.addEventListener('input', e => {
     })
 })
 
-
 const sectionCountLabel = document.querySelector('.section-label');
-sectionCountLabel.innerText = `${list_cctv_us.length} active ${list_cctv_us.length > 1 ? 'cameras' : 'camera'}`;
+sectionCountLabel.innerText = `${list_cctv_purwokerto.length} active ${list_cctv_purwokerto.length > 1 ? 'cameras' : 'camera'}`;
